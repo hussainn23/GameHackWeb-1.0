@@ -1,15 +1,19 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-const HRatingCards = ({ title, rating, position, img ,highlight}) => {
+const HRatingCards = ({ title, rating, position, img ,highlight,Category,second,third,id}) => {
   const navigate=useNavigate()
   return (
      <div
-      className={`cursor-pointer relative sm:w-30  md:w-34 md:h-30 lg:h-40 lg:w-54 h-34 h- border-[1px] border-white bg-gradient-to-br from-[#9F009B] to-[#8F00B0] text-white  rounded-xl flex flex-col items-center justify-center shadow-lg transition-all duration-300 ${
-        highlight ? 'mt-[-90px]  ' : 'mt-0'
-      }`}
+      className={`cursor-pointer relative sm:w-30 md:w-34 md:h-30 lg:h-40 lg:w-54 h-34
+              border border-white bg-gradient-to-br from-[#9F009B] to-[#8F00B0]
+              text-white rounded-xl flex flex-col items-center justify-center
+              shadow-lg transition-all duration-300
+              ${highlight ? 'col-start-2  relative top-[-3rem]' : 'mt-0'}
+              ${second    ? 'col-start-1 row-start-1' : ''}
+              ${third     ? 'col-start-3 ' : ''}`}
     onClick={() => navigate('/allapps', {
-  state: { category: title ,rating:rating }
+  state: { category: Category ,rating:rating ,id:id}
 })}
 >
       {/* Position Badge */}
@@ -29,7 +33,7 @@ const HRatingCards = ({ title, rating, position, img ,highlight}) => {
 
       {/* Rating */}
       <p className="text-yellow-300 font-semibold text-sm mt-1">
-        {rating} ★ Rating
+        4.8{rating} ★ Rating
       </p>
     </div>
   );

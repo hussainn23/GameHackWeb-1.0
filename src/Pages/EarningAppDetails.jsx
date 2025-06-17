@@ -4,7 +4,7 @@ import TradingCards from '../Component/TradingCards';
 import { collection, getDocs ,doc,getDoc } from 'firebase/firestore';
 import { db } from '../../config/firebase'; // adjust path as needed
 
-const AllAps = () => {
+const EarningAppDetails = () => {
   const location = useLocation();
   const category = location.state?.category || 'Unknown';
   const rating = location.state?.rating || 'Unknown';
@@ -118,7 +118,7 @@ const AllAps = () => {
         <img
           src={section.Image}
           alt={`Section ${idx + 1}`}
-          className="w-full h-40 object-cover rounded-md mb-2"
+          className="w-full h-40  rounded-md mb-2"
         />
       )}
       {section.Description && (
@@ -157,4 +157,5 @@ const AllAps = () => {
   );
 };
 
-export default AllAps;
+
+export default EarningAppDetails

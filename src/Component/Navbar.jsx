@@ -18,13 +18,13 @@ const Navbar = () => {
         <Link to='/'>
              HOME
         </Link>
-         <Link to='/tradingapps'>
+         <Link to='/earningapps' state={{ category: 'COLOUR TRADING' }}>
              COLOR TRADING APPS
         </Link>
-         <Link to='/rumpyapps'>
+         <Link to='/earningapps' state={{ category: 'RUMPY GAMES' }}>
              RUMPY APPS
         </Link>
-         <Link to='/yonoapps'>
+         <Link to='/earningapps' state={{ category: 'YONO GAMES' }}>
              YONO APPS
         </Link>
 
@@ -36,17 +36,18 @@ const Navbar = () => {
              HOME
         </Link></DropdownMenuItem>
    <DropdownMenuSeparator/>
+
           <DropdownMenuItem className='p-4'>
-             <Link to='/tradingapps'>
+             <Link to='/earningapps' state={{ category: 'COLOUR TRADING' }}>
              COLOR TRADING APPS
         </Link>
           </DropdownMenuItem>
      <DropdownMenuSeparator/>
-          <DropdownMenuItem className='p-4'> <Link to='/rumpyapps'>
+          <DropdownMenuItem className='p-4'> <Link to='/earningapps' state={{ category: 'RUMPY GAMES' }}>
              RUMPY APPS
         </Link></DropdownMenuItem>
         <DropdownMenuSeparator />
-          <DropdownMenuItem className='p-4'> <Link to='/yonoapps'>
+          <DropdownMenuItem className='p-4'> <Link to='/earningapps' state={{ category: 'YONO GAMES' }}>
              YONO APPS
         </Link></DropdownMenuItem>
         <DropdownMenuSeparator />
