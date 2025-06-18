@@ -17,10 +17,10 @@ export const Marquee = () => {
       <Button className='bg-[#6900E0] px-2 py-0 text-[12px]'>
           <Link
     to='/earningapps'
-    state={{ category: 'RUMPY GAMES' }}
+    state={{ category: 'RUMMY GAMES' }}
     className='transition duration-300 ease-in-out hover:scale-105 hover:text-[#E3E3E3] hover:underline underline-offset-4'
   >
-    RUMPY APPS
+    RUMMY APPS
   </Link>
       </Button>
 <Button className='bg-[#6900E0] px-2 py-0 text-[12px]'>

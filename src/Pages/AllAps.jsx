@@ -96,17 +96,17 @@ useEffect(() => {
 <div className="p-4 flex lg:flex-row sm:flex-col md:flex-col">
       {/* LEFT SECTION */}
          <div className='flex flex-col  justify-center lg:w-[50%] sm:w-[100%] md:w-[100%] '>
-                <img src={selectedApp.MainImage} className='rounded-[1.9rem] sm:rounded-[1.5rem] lg:w-[90%] sm:w-[97%] lg:h-[320px] sm:h-[280px] m-auto ' />
+                <img src={selectedApp.MainImage} className='rounded-[1.9rem]  sm:rounded-[1.5rem] lg:w-[90%] sm:w-[97%] lg:h-[320px] sm:h-[280px] m-auto ' />
                 <img src={selectedApp.Logo} className='rounded-[1rem] lg:w-36 lg:h-36 relative m-auto top-[-2rem] lg:top-[-4rem] sm:w-28 sm:h-28 sm:top-[-3rem]' />
-                <h1 className=' lg:text-[3.7rem] sm:text-[2.3rem] text-center  font-bold text-[#8900C1] uppercase relative top-[-2rem]'>{selectedApp.Name}</h1>
-                <div className='flex items-center lg:text-[1.2rem] w-[90%] m-auto justify-between font-semibold relative top-[-1rem]'>
-                    <p> {selectedApp.rating||"4.7"} ★<br /> Rating</p>
+                <h1 className=' lg:text-[3.7rem] sm:text-[2.3rem] text-center  font-bold text-[#8900C1] uppercase relative leading-none lg:top-[-2.5rem] sm:top-[-2rem]'>{selectedApp.Name}</h1>
+                <div className='flex items-center lg:text-[1.2rem] lg:w-[90%]  sm:w-[97%] m-auto justify-between font-semibold relative top-[-2rem] '>
+                    <p> {selectedApp.rating||"4.7"} <span className='text-red-600'> ★</span><br /> Rating</p>
                     <p>{selectedApp.SizeMB}  MB</p>
                     <p>{selectedApp.bonus||"115"}rs<br />bonus</p>
                 </div>
-                <div className='flex items-center justify-center sm:gap-4 lg:gap-3 font-bold '>
-                    <button onClick={handleKnowMore} className='rounded-[2rem] lg:text-[1.3rem] cursor-pointer lg:p-3 font-semibold  p-2 bg-[#E4D8FF] w-[40%] border-[1px] border-[#8700BA]'>Know More</button>
-                    <button className='rounded-[2rem] p-2 font-semibold lg:text-[1.3rem] cursor-pointer lg:p-3 text-white bg-[#8700BA] w-[40%]'>
+                <div className='flex relative top-[-1rem] lg:w-[90%] sm:w-[98%]   m-auto items-center justify-between sm:gap-4 lg:gap-3 font-bold '>
+                    <button onClick={handleKnowMore} className='rounded-[2rem] lg:text-[1.3rem] cursor-pointer lg:p-3 font-semibold w-[50%] p-2 bg-[#E4D8FF]  border-[1px] border-[#8700BA]'>Know More</button>
+                    <button className='rounded-[2rem] p-2 font-semibold lg:text-[1.3rem] cursor-pointer lg:p-3 text-white bg-[#8700BA] w-[50%]'>
                      <a href={selectedApp.URL}  rel="noopener noreferrer">Download</a>
                     </button>
                 </div>
@@ -166,9 +166,9 @@ useEffect(() => {
             </div>
 
       {/* RIGHT SECTION - Related Apps */}
-      <div className="lg:w-[55%] sm:w-[100%] md:w-[100%]">
-        <h1 className="text-2xl mt-2 lg:text-[2rem] font-bold text-[#8900C1] uppercase">Related APPS</h1>
-        <div className="mt-5 grid grid-cols-2 gap-2">
+      <div className="lg:w-[50%] sm:w-[100%] md:w-[100%]">
+        <h1 className="text-2xl sm:mt-1  lg:text-[2rem] font-bold text-[#8900C1] uppercase">Related APPS</h1>
+        <div className="mt-2  grid sm:grid-cols-2  lg:grid-cols-2 lg:gap-4 sm:gap-3 2xl:grid-cols-3">
           {tradingCards.map((item, index) => (
             <div  onClick={()=>setID(item.id)}>
                  <TradingCards
@@ -178,7 +178,7 @@ useEffect(() => {
               rating={item.rating||"4.7"}
               details={item.Description || 'No description'}
               compact={false}
-             
+              related={true}
             />
              
             </div>

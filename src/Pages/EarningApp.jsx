@@ -44,9 +44,9 @@ const EarningApp = () => {
       <div className='p-4'>
         <h1 className='text-2xl font-semibold lg:text-[2.7rem]'>{category}</h1>
 
-        <div className='rounded-lg p-1 bg-[#E3E3E3] mt-3 '>
+        <div className='rounded-lg p-3 flex flex-col gap-1 bg-[#E3E3E3] mt-3 '>
           <h1 className='text-xl  text-[#7804A8] font-semibold lg:text-[2.4rem]'>TOP APPS</h1>
-          <div className="flex mb-1 gap-4 overflow-x-scroll no-scrollbar  snap-x snap-mandatory p-1" id='no-scrollbar'>
+          <div className="flex py-1  gap-4 overflow-x-scroll no-scrollbar  snap-x snap-mandatory " id='no-scrollbar'>
           {tradingCards
   .filter(item => parseFloat(item.rating) > 4.5)
   .map((item, index) => (
@@ -65,7 +65,7 @@ const EarningApp = () => {
         </div>
 
         <h1 className='text-xl text-[#7804A8] font-semibold mt-3 lg:text-[2.4rem]'>ALL APPS</h1>
-        <div className='grid lg:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-2 sm:gap-1 mt-4 '>
+        <div className='grid lg:grid-cols-3 2xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-3.5 sm:gap-1 mt-4 '>
           {tradingCards.map((item, index) => (
             <div onClick={() => navigate('/earningAppDetails', { state: { category: item.Category ,id:item.id} })}>
             <TradingCards

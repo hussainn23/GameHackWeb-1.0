@@ -44,8 +44,8 @@ const Home = () => {
     bgGradient: "bg-[linear-gradient(to_top_right,#9500A8,#6E00D9)]",
   },
   {
-    title: "RUMPY GAMES",
-    category:"RUMPY GAMES",
+    title: "RUMMY GAMES",
+    category:"RUMMY GAMES",
     link: "/earningapps",
     bgGradient: "bg-[linear-gradient(to_top_right,#7300D2,#6E00D9)]",
   },

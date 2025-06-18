@@ -39,10 +39,10 @@ const Navbar = () => {
   </Link>
   <Link
     to='/earningapps'
-    state={{ category: 'RUMPY GAMES' }}
+    state={{ category: 'RUMMY GAMES' }}
     className='transition duration-300 ease-in-out hover:scale-105 hover:text-[#E3E3E3] hover:underline underline-offset-4'
   >
-    RUMPY APPS
+    RUMMY APPS
   </Link>
   <Link
     to='/earningapps'
@@ -67,8 +67,8 @@ const Navbar = () => {
         </Link>
           </DropdownMenuItem>
      <DropdownMenuSeparator/>
-          <DropdownMenuItem className='lg:p-4 sm:p-2'> <Link to='/earningapps' state={{ category: 'RUMPY GAMES' }}>
-             RUMPY APPS
+          <DropdownMenuItem className='lg:p-4 sm:p-2'> <Link to='/earningapps' state={{ category: 'RUMMY GAMES' }}>
+             RUMMY APPS
         </Link></DropdownMenuItem>
         <DropdownMenuSeparator />
           <DropdownMenuItem className='lg:p-4 sm:p-2'> <Link to='/earningapps' state={{ category: 'YONO GAMES' }}>
