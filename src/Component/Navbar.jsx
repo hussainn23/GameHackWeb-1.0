@@ -17,28 +17,28 @@ const Navbar = () => {
      <div className='items-center text-[1.3rem] justify-between w-[50%] lg:flex sm:hidden md:hidden'>
   <Link
     to='/'
-    className='transition duration-300 ease-in-out hover:scale-105 hover:text-purple-300 hover:underline underline-offset-4'
+    className='transition duration-300 ease-in-out hover:scale-105 hover:text-[#E3E3E3] hover:underline underline-offset-4'
   >
     HOME
   </Link>
   <Link
     to='/earningapps'
     state={{ category: 'COLOUR TRADING' }}
-    className='transition duration-300 ease-in-out hover:scale-105 hover:text-purple-300 hover:underline underline-offset-4'
+    className='transition duration-300 ease-in-out hover:scale-105 hover:text-[#E3E3E3] hover:underline underline-offset-4'
   >
     COLOR TRADING APPS
   </Link>
   <Link
     to='/earningapps'
     state={{ category: 'RUMPY GAMES' }}
-    className='transition duration-300 ease-in-out hover:scale-105 hover:text-purple-300 hover:underline underline-offset-4'
+    className='transition duration-300 ease-in-out hover:scale-105 hover:text-[#E3E3E3] hover:underline underline-offset-4'
   >
     RUMPY APPS
   </Link>
   <Link
     to='/earningapps'
     state={{ category: 'YONO GAMES' }}
-    className='transition duration-300 ease-in-out hover:scale-105 hover:text-purple-300 hover:underline underline-offset-4'
+    className='transition duration-300 ease-in-out hover:scale-105 hover:text-[#E3E3E3] hover:underline underline-offset-4'
   >
     YONO APPS
   </Link>
