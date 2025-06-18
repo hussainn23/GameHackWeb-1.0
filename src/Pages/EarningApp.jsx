@@ -75,6 +75,7 @@ const EarningApp = () => {
               rating={item.rating }
               details={item.Description || 'No description'}
               compact={false}
+              related={true}
             />
             </div>
           ))}
