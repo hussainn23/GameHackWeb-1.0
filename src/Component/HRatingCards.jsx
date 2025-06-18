@@ -25,7 +25,7 @@ const HRatingCards = ({ title, rating, position, img ,highlight,Category,second,
       <img
         src={img}
       
-        className="sm:w-12 sm:h-10 lg:w-32 lg:h-32 rounded-[0.7rem] lg:rounded-[25px] mt-3 object-contain"
+        className="sm:w-10 sm:h-10 lg:w-32 lg:h-32 rounded-[0.7rem] lg:rounded-[25px] mt-3 object-contain"
       />
 
       {/* Title */}
