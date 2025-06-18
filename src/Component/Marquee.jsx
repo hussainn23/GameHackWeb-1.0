@@ -3,9 +3,9 @@ import { Link } from 'react-router-dom'
 import {Button} from '../components/ui/button'
 export const Marquee = () => {
   return (
-    <div className="  text-[14px] px-2 py-1 flex items-center justify-between overflow-hidden text-white lg:hidden">
+    <div className="  text-[8px] px-2 py-1 flex items-center justify-between overflow-hidden text-white lg:hidden">
       {/* `whitespace-nowrap` prevents line‑breaks */}
-      <Button className='bg-[#6900E0] p-2'>
+      <Button className='bg-[#6900E0] px-1 py-0 text-[12px]'>
          <Link
     to='/earningapps'
     state={{ category: 'COLOUR TRADING' }}
@@ -14,7 +14,7 @@ export const Marquee = () => {
     COLOR TRADING APPS
   </Link>
       </Button>
-      <Button className='bg-[#6900E0] p-2'>
+      <Button className='bg-[#6900E0] px-1 py-0 text-[12px]'>
           <Link
     to='/earningapps'
     state={{ category: 'RUMPY GAMES' }}
@@ -23,7 +23,7 @@ export const Marquee = () => {
     RUMPY APPS
   </Link>
       </Button>
-<Button className='bg-[#6900E0] p-2'>
+<Button className='bg-[#6900E0] px-1 py-0 text-[12px]'>
    <Link
     to='/earningapps'
     state={{ category: 'YONO GAMES' }}
