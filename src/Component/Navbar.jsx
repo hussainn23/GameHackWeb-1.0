@@ -12,58 +12,73 @@ import { Link } from 'react-router-dom'
 
 const Navbar = () => {
   return (
-    <div className='z-10   h-[10vh] left-0 w-[100%] bg-[#2B0061] text-white p-4 flex items-center justify-between  '>
-      <h1 className='text-[#FFE300] font-semibold'>REAL RUMPY APPS</h1>
-      <div className=' items-center justify-between w-[50%] lg:flex sm:hidden md:hidden '>
-        <Link to='/'>
-             HOME
-        </Link>
-         <Link to='/earningapps' state={{ category: 'COLOUR TRADING' }}>
-             COLOR TRADING APPS
-        </Link>
-         <Link to='/earningapps' state={{ category: 'RUMPY GAMES' }}>
-             RUMPY APPS
-        </Link>
-         <Link to='/earningapps' state={{ category: 'YONO GAMES' }}>
-             YONO APPS
-        </Link>
+    <div className='z-10  sm:h-[5vh] sm:p-2 lg:h-[10vh] left-0 w-[100%] bg-[#2B0061] text-white p-4 flex items-center justify-between  '>
+      <h1 className='text-[#FFE300] text-[1.3rem] font-semibold sm:text-[1rem]'>REAL RUMPY APPS</h1>
+     <div className='items-center text-[1.3rem] justify-between w-[50%] lg:flex sm:hidden md:hidden'>
+  <Link
+    to='/'
+    className='transition duration-300 ease-in-out hover:scale-105 hover:text-purple-300 hover:underline underline-offset-4'
+  >
+    HOME
+  </Link>
+  <Link
+    to='/earningapps'
+    state={{ category: 'COLOUR TRADING' }}
+    className='transition duration-300 ease-in-out hover:scale-105 hover:text-purple-300 hover:underline underline-offset-4'
+  >
+    COLOR TRADING APPS
+  </Link>
+  <Link
+    to='/earningapps'
+    state={{ category: 'RUMPY GAMES' }}
+    className='transition duration-300 ease-in-out hover:scale-105 hover:text-purple-300 hover:underline underline-offset-4'
+  >
+    RUMPY APPS
+  </Link>
+  <Link
+    to='/earningapps'
+    state={{ category: 'YONO GAMES' }}
+    className='transition duration-300 ease-in-out hover:scale-105 hover:text-purple-300 hover:underline underline-offset-4'
+  >
+    YONO APPS
+  </Link>
+</div>
 
-      </div>
        <DropdownMenu >
         <DropdownMenuTrigger ><Menu className='cursor-pointer'/></DropdownMenuTrigger>
-        <DropdownMenuContent className=' w-[70vw]  overflow-y-auto  rounded-md shadow-md p-2 bg-white'>
-          <DropdownMenuItem className='p-4'>  <Link to='/'>
+        <DropdownMenuContent className=' lg:w-[70vw] sm:w-[50vw] overflow-y-auto  rounded-md shadow-md p-2 bg-white'>
+          <DropdownMenuItem className='lg:p-4 sm:p-2'>  <Link to='/'>
              HOME
         </Link></DropdownMenuItem>
    <DropdownMenuSeparator/>
 
-          <DropdownMenuItem className='p-4'>
+          <DropdownMenuItem className='lg:p-4 sm:p-2'>
              <Link to='/earningapps' state={{ category: 'COLOUR TRADING' }}>
              COLOR TRADING APPS
         </Link>
           </DropdownMenuItem>
      <DropdownMenuSeparator/>
-          <DropdownMenuItem className='p-4'> <Link to='/earningapps' state={{ category: 'RUMPY GAMES' }}>
+          <DropdownMenuItem className='lg:p-4 sm:p-2'> <Link to='/earningapps' state={{ category: 'RUMPY GAMES' }}>
              RUMPY APPS
         </Link></DropdownMenuItem>
         <DropdownMenuSeparator />
-          <DropdownMenuItem className='p-4'> <Link to='/earningapps' state={{ category: 'YONO GAMES' }}>
+          <DropdownMenuItem className='lg:p-4 sm:p-2'> <Link to='/earningapps' state={{ category: 'YONO GAMES' }}>
              YONO APPS
         </Link></DropdownMenuItem>
         <DropdownMenuSeparator />
-         <DropdownMenuItem className='p-4'> <Link to='/aboutus'>
+         <DropdownMenuItem className='lg:p-4 sm:p-2'> <Link to='/aboutus'>
              ABOUT US
         </Link></DropdownMenuItem>
           <DropdownMenuSeparator />
-         <DropdownMenuItem className='p-4'> <Link to='/contactus'>
+         <DropdownMenuItem className='lg:p-4 sm:p-2'> <Link to='/contactus'>
              CONTACT US
         </Link></DropdownMenuItem>
           <DropdownMenuSeparator />
-         <DropdownMenuItem className='p-4'> <Link to='/termsconditions'>
+         <DropdownMenuItem className='lg:p-4 sm:p-2'> <Link to='/termsconditions'>
           TERMS & CONDITIONS
         </Link></DropdownMenuItem>
         <DropdownMenuSeparator />
-         <DropdownMenuItem className='p-4'> <Link to='/privacypolicy'>
+         <DropdownMenuItem className='lg:p-4 sm:p-2'> <Link to='/privacypolicy'>
              PRIVACY & POLICY
         </Link></DropdownMenuItem>
         <DropdownMenuSeparator />
