@@ -5,7 +5,7 @@ const HRatingCards = ({ title, rating, position, img ,highlight,Category,second,
   const navigate=useNavigate()
   return (
      <div
-  className={`cursor-pointer relative sm:w-28 md:w-34 md:h-30 lg:h-66 lg:w-62 h-29
+  className={`cursor-pointer relative sm:w-25 md:w-32 md:h-30 lg:h-66 lg:w-62 h-29
               border border-white bg-gradient-to-br from-[#9F009B] to-[#8F00B0]
               text-white rounded-[1rem] lg:rounded-[2rem] flex flex-col items-center justify-center
               shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 hover:shadow-2xl
@@ -33,7 +33,7 @@ const HRatingCards = ({ title, rating, position, img ,highlight,Category,second,
 
       {/* Rating */}
       <p className="text-yellow-300  text-sm mb-1">
-        4.8{rating} ★ Rating
+        {rating} ★ Rating
       </p>
     </div>
   );

@@ -79,7 +79,7 @@ const Home = () => {
 </div>
 
         <div className='bg-[#2B0061] sm:min-h-[75vh]'>
-           <div className=" grid grid-cols-3  md:w-[65%] sm:w-[95%] lg:w-[75%] lg:gap-3 sm:gap-1 m-auto lg:p-6 relative top-16 sm:p-2 ">
+           <div className=" grid grid-cols-3  md:w-[65%] sm:w-[95%] lg:w-[75%] lg:gap-3 sm:gap-2 m-auto lg:p-6 relative top-16 sm:p-2 ">
         {RatingData.map((item, index) => (
           <HRatingCards
           id={item.id}
