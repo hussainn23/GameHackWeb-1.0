@@ -110,7 +110,7 @@ const [loading, setLoading] = useState(false);
                 <div
    className={`
      overflow-hidden transition-all duration-500 ease-in-out 
-     ${knowMore ? ' m-3 max-h-[1000px] p-4 opacity-100' : 'max-h-0 opacity-0'}
+     ${knowMore ? ' mt-3 max-h-[1000px] p-4 opacity-100' : 'max-h-0 opacity-0'}
      bg-[#F9F2FF] m-[2px] rounded-xl shadow-md 
    `}
  >
