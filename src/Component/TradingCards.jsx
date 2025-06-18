@@ -19,7 +19,7 @@ const TradingCards = ({title,rating,details,img,compact}) => {
            
         </div>
     </div>
-    <p className='text-[#F3C118] lg:text-[16px] leading-none sm:text-[8px] text-center'>
+    <p className='text-[#F3C118] font-semibold lg:text-[17px] mb-1 leading-none sm:text-[8px] text-center'>
    {details}
     </p>
    </div>

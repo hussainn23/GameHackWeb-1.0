@@ -46,7 +46,7 @@ const EarningApp = () => {
 
         <div className='rounded-lg p-1 bg-[#E3E3E3] mt-3 '>
           <h1 className='text-xl p-1 text-[#7804A8] font-semibold lg:text-[2.4rem]'>TOP APPS</h1>
-          <div className="flex gap-4 overflow-x-scroll no-scrollbar mt-2 snap-x snap-mandatory p-2">
+          <div className="flex gap-4 overflow-x-scroll no-scrollbar  snap-x snap-mandatory p-1">
           {tradingCards
   .filter(item => parseFloat(item.rating) > 4.5)
   .map((item, index) => (
