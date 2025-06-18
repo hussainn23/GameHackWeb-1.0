@@ -19,8 +19,9 @@ const TradingCards = ({title,rating,details,img,compact,related}) => {
         <div>
             <h2 className='text-white font-semibold uppercase lg:text-[2rem] md:text-[16px] sm:text-[16px]'>{title}</h2>
            <p
-  className={`text-[#F3C118] lg:text-[24px] md:text-[10px] ${
-    compact ? 'sm:text-[9px]' : 'sm:text-[14px] lg:text-[22px]'
+  className={`text-[#F3C118] lg:text-[24px] md:text-[10px] 
+    ${compact ? 'sm:text-[9px]' : 'sm:text-[14px] lg:text-[22px]'}
+    ${related?'sm:text-[5px]':''}
   }`}
 >
   {rating} ★ Rating
