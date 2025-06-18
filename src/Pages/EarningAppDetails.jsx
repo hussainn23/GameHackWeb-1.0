@@ -111,7 +111,7 @@ const [loading, setLoading] = useState(false);
    className={`
      overflow-hidden transition-all duration-500 ease-in-out 
      ${knowMore ? ' m-3 max-h-[1000px] p-4 opacity-100' : 'max-h-0 opacity-0'}
-     bg-[#F9F2FF] m-1 rounded-xl shadow-md 
+     bg-[#F9F2FF] m-[2px] rounded-xl shadow-md 
    `}
  >
    <h2 className="text-2xl p-2 font-bold text-[#8900C1] uppercase mb-4 text-center lg:text-[2.3rem]">App Details</h2>
