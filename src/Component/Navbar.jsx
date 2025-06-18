@@ -8,12 +8,21 @@ import {
   DropdownMenuSeparator,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 const Navbar = () => {
+
+  const location = useLocation();
+  const isHome = location.pathname === '/';
   return (
-    <div className='z-10  sm:h-[5vh] sm:p-2 lg:h-[10vh] left-0 w-[100%] lg:bg-[#2B0061] lg:text-white p-4 flex items-center justify-between sm:bg-white sm:text-black '>
-      <h1 className='lg:text-[#FFE300] sm:text-black lg:text-[1.3rem] font-semibold sm:text-[1rem]'>REAL RUMPY APPS</h1>
+     <div
+      className={`z-10 sm:h-[5vh] sm:p-2 lg:h-[10vh] left-0 w-[100%] p-4 flex items-center justify-between 
+        ${isHome ? 'bg-[#2B0061] text-white' : 'lg:bg-[#2B0061] lg:text-white sm:bg-white '}`}
+    >
+ <h1
+      className={`font-semibold lg:text-[1.3rem] sm:text-[1rem] 
+        ${isHome ? 'text-yellow-400' : 'lg:text-[#FFE300] sm:text-black'}`}
+    >REAL RUMPY APPS</h1>
      <div className='items-center text-[1.3rem] justify-between w-[50%] lg:flex sm:hidden md:hidden'>
   <Link
     to='/'
