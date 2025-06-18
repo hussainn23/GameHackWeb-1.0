@@ -20,7 +20,7 @@ const TradingCards = ({title,rating,details,img,compact,related}) => {
             <h2 className='text-white font-semibold uppercase lg:text-[2rem] md:text-[16px] sm:text-[16px]'>{title}</h2>
            <p
   className={`text-[#F3C118] lg:text-[24px] md:text-[10px] 
-    ${related?'sm:text-[3rem]':''}
+    ${related?'sm:text-[11px]':''}
     ${compact ? 'sm:text-[11px]' : 'sm:text-[14px] lg:text-[22px]'}
   
   }`}
