@@ -177,6 +177,7 @@ const [loading, setLoading] = useState(false);
                details={item.Description || 'No description'}
                compact={false}
                related={true}
+               allApps={false}
              />
               
              </div>

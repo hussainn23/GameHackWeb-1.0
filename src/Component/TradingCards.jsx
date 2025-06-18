@@ -1,13 +1,13 @@
 import React from 'react'
 
-const TradingCards = ({title,rating,details,img,compact,related}) => {
+const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
   return (
   <div
   className={`lg:rounded-[2rem] sm:rounded-[1rem] cursor-pointer p-1 bg-[linear-gradient(to_top_right,#9500A8,#6E00D9)]
     ${compact
-      ? 'lg:max-w-[400px] md:min-w-[200px] md:max-w-[200px] sm:min-w-[155px] sm:max-w-[150px] lg:h-[250px]'
-      : related
-      ? 'lg:h-[230px] sm:h-[140px]'
+      ? 'lg:max-w-[390px] md:min-w-[200px] md:max-w-[200px] sm:min-w-[155px] sm:max-w-[150px] lg:h-[240px]'
+      :  allApps
+      ? 'lg:h-[265px] sm:h-[140px]'
       : 'lg:h-[260px] sm:h-[135px]'
     }`}
 >
@@ -19,9 +19,11 @@ const TradingCards = ({title,rating,details,img,compact,related}) => {
         <div>
             <h2 className='text-white font-semibold uppercase lg:text-[2rem] md:text-[16px] sm:text-[16px]'>{title}</h2>
            <p
-  className={`text-[#F3C118] lg:text-[24px] md:text-[10px] 
-    ${related?'sm:text-[11px]':''}
-    ${compact ? 'sm:text-[11px]' : 'sm:text-[14px] lg:text-[22px]'}
+  className={`text-[#F3C118]  md:text-[10px] 
+  
+    ${compact ? 'sm:text-[11px]  lg:text-[24px]' : ''}
+     ${allApps ? 'sm:text-[12px] lg:text-[26px]':''}
+     ${related ? 'sm:text-[12px] lg:text-[24px]':''}
   
   }`}
 >
@@ -33,8 +35,9 @@ const TradingCards = ({title,rating,details,img,compact,related}) => {
     </div>
 <p
  className={`text-[#F3C118] font-semibold mb-1 leading-none text-center 
-  ${related ? 'lg:text-[20px] sm:text-[4px] lg:mt-2 ' : 'lg:text-[28px] '} 
-  ${compact ? 'sm:text-[10px]' : 'sm:text-[12px]'}
+  ${allApps ? 'lg:text-[29px] sm:text-[0.73rem] lg:mt-2 ' : ''} 
+  ${compact ? 'sm:text-[10px] lg:text-[24px]' : ''}
+    ${related ? 'sm:text-[12px] lg:text-[24px]':''}
 `}
 >
 

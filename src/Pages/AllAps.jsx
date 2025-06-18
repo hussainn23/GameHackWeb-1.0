@@ -179,6 +179,7 @@ useEffect(() => {
               details={item.Description || 'No description'}
               compact={false}
               related={true}
+               allApps={false}
             />
              
             </div>
