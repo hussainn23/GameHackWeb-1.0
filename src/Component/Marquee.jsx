@@ -2,7 +2,7 @@ import React from 'react'
 
 export const Marquee = () => {
   return (
-    <div className="bg-[#6900E0]  overflow-hidden text-white">
+    <div className="bg-[#6900E0]  overflow-hidden text-white lg:hidden">
       {/* `whitespace-nowrap` prevents line‑breaks */}
       <marquee
         behavior="scroll"
