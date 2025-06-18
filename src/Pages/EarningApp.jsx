@@ -45,12 +45,12 @@ const EarningApp = () => {
         <h1 className='text-2xl font-semibold lg:text-[2.7rem]'>{category}</h1>
 
         <div className='rounded-lg p-1 bg-[#E3E3E3] mt-3 '>
-          <h1 className='text-xl p-1 text-[#7804A8] font-semibold lg:text-[2.4rem]'>TOP APPS</h1>
-          <div className="flex gap-4 overflow-x-scroll no-scrollbar  snap-x snap-mandatory p-1">
+          <h1 className='text-xl  text-[#7804A8] font-semibold lg:text-[2.4rem]'>TOP APPS</h1>
+          <div className="flex mb-1 gap-4 overflow-x-scroll no-scrollbar  snap-x snap-mandatory p-1">
           {tradingCards
   .filter(item => parseFloat(item.rating) > 4.5)
   .map((item, index) => (
-    <div key={item.id || index} onClick={() => navigate('/earningAppDetails', { state: { category: item.Category, id: item.id } })}>
+    <div className='' key={item.id || index} onClick={() => navigate('/earningAppDetails', { state: { category: item.Category, id: item.id } })}>
       <TradingCards
         title={item.Name}
         img={item.Logo || item.MainImage}
