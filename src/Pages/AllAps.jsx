@@ -113,8 +113,8 @@ useEffect(() => {
                <div
   className={`
     overflow-hidden transition-all duration-500 ease-in-out 
-    ${knowMore ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
-    bg-[#F9F2FF] p-4 rounded-xl shadow-md mt-4
+    ${knowMore ? 'm-2 p-4 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
+    bg-[#F9F2FF]  rounded-xl shadow-md 
   `}
 >
   <h2 className="text-2xl font-bold text-[#8900C1] uppercase mb-4 text-center lg:text-[2.3rem]">App Details</h2>

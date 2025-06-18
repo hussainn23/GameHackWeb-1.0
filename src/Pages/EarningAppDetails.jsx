@@ -95,7 +95,7 @@ const [loading, setLoading] = useState(false);
           <div className='flex flex-col  justify-center lg:w-[50%] sm:w-[100%] md:w-[100%] '>
                  <img src={selectedApp.MainImage} className='rounded-[1.9rem] sm:rounded-[1.5rem] lg:w-[90%] sm:w-[97%] lg:h-[320px] sm:h-[280px] m-auto ' />
                  <img src={selectedApp.Logo} className='rounded-[1rem] lg:w-36 lg:h-36 relative m-auto top-[-2rem] lg:top-[-4rem] sm:w-28 sm:h-28 sm:top-[-3rem]' />
-                 <h1 className=' lg:text-[3.7rem] sm:text-[2.3rem] text-center  font-bold text-[#8900C1] uppercase relative top-[-2rem]'>{selectedApp.Name}</h1>
+                 <h1 className=' lg:text-[3.7rem] sm:text-[2rem] text-center  font-bold text-[#8900C1] uppercase relative top-[-2rem]'>{selectedApp.Name}</h1>
                  <div className='flex items-center lg:text-[1.2rem] lg:w-[90%]  sm:w-[97%] m-auto justify-between font-semibold relative top-[-1rem]'>
                      <p> {selectedApp.rating} <span className='text-red-600'> ★</span><br /> Rating</p>
                      <p>{selectedApp.SizeMB}  MB</p>
@@ -110,11 +110,11 @@ const [loading, setLoading] = useState(false);
                 <div
    className={`
      overflow-hidden transition-all duration-500 ease-in-out 
-     ${knowMore ? 'max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}
-     bg-[#F9F2FF] p-4 rounded-xl shadow-md mt-4
+     ${knowMore ? ' m-2 max-h-[1000px] p-4 opacity-100' : 'max-h-0 opacity-0'}
+     bg-[#F9F2FF] rounded-xl shadow-md 
    `}
  >
-   <h2 className="text-2xl font-bold text-[#8900C1] uppercase mb-4 text-center lg:text-[2.3rem]">App Details</h2>
+   <h2 className="text-2xl p-2 font-bold text-[#8900C1] uppercase mb-4 text-center lg:text-[2.3rem]">App Details</h2>
  
    {selectedApp?.Sections?.filter(
      (sec) => sec.Heading || sec.Description || sec.Image
