@@ -13,7 +13,7 @@ import { Link } from 'react-router-dom'
 const Navbar = () => {
   return (
     <div className='z-10  sm:h-[5vh] sm:p-2 lg:h-[10vh] left-0 w-[100%] bg-[#2B0061] text-white p-4 flex items-center justify-between  '>
-      <h1 className='text-[#FFE300] text-[1.3rem] font-semibold sm:text-[1rem]'>REAL RUMPY APPS</h1>
+      <h1 className='text-[#FFE300] lg:text-[1.3rem] font-semibold sm:text-[1rem]'>REAL RUMPY APPS</h1>
      <div className='items-center text-[1.3rem] justify-between w-[50%] lg:flex sm:hidden md:hidden'>
   <Link
     to='/'
