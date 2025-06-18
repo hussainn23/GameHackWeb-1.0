@@ -97,12 +97,12 @@ const [loading, setLoading] = useState(false);
                  <img src={selectedApp.Logo} className='rounded-[1rem] lg:w-36 lg:h-36 relative m-auto top-[-2rem] lg:top-[-4rem] sm:w-28 sm:h-28 sm:top-[-3rem]' />
                  <h1 className=' lg:text-[3.7rem] sm:text-[2.3rem] text-center  font-bold text-[#8900C1] uppercase relative top-[-2rem]'>{selectedApp.Name}</h1>
                  <div className='flex items-center lg:text-[1.2rem] w-[90%] m-auto justify-between font-semibold relative top-[-1rem]'>
-                     <p> {selectedApp.bonus||"4.7"} ★<br /> Rating</p>
+                     <p> {selectedApp.rating||"4.7"} ★<br /> Rating</p>
                      <p>{selectedApp.SizeMB}  MB</p>
                      <p>{selectedApp.bonus||'115'}rs<br />bonus</p>
                  </div>
                  <div className='flex items-center justify-center sm:gap-4 lg:gap-3 font-bold '>
-                     <button onClick={handleKnowMore} className='rounded-[2rem] lg:text-[1.3rem] cursor-pointer lg:p-3 font-semibold  p-2 bg-[#E4D8FF] w-[40%]'>Know More</button>
+                     <button onClick={handleKnowMore} className='rounded-[2rem] border-[1px] border-[#8700BA] lg:text-[1.3rem] cursor-pointer lg:p-3 font-semibold  p-2 bg-[#E4D8FF] w-[40%]'>Know More</button>
                      <button className='rounded-[2rem] p-2 font-semibold lg:text-[1.3rem] cursor-pointer lg:p-3 text-white bg-[#8700BA] w-[40%]'>
                       <a href={selectedApp.URL}  rel="noopener noreferrer">Download</a>
                      </button>
@@ -133,10 +133,11 @@ const [loading, setLoading] = useState(false);
    <div className="fixed inset-0 bg-black bg-opacity-80 z-50 flex items-center justify-center">
      <div className="relative max-w-[90%] max-h-[90%]">
        <button
-         className="absolute top-2 right-2 text-white text-3xl font-bold z-50"
+         className="absolute top-[-2.5rem]  cursor-pointer right-2 text-white text-3xl font-bold z-50"
          onClick={() => setPreviewImage(null)}
        >
          &times;
+         
        </button>
        <img
          src={previewImage}
