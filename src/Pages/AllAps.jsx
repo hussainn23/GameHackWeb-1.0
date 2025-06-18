@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import TradingCards from '../Component/TradingCards';
 import { collection, getDocs ,doc,getDoc } from 'firebase/firestore';
 import { db } from '../../config/firebase'; // adjust path as needed
-
+import { Marquee } from '../Component/Marquee';
 const AllAps = () => {
   const location = useLocation();
   const category = location.state?.category || 'Unknown';
@@ -92,6 +92,7 @@ useEffect(() => {
     <div className="animate-spin rounded-full h-14 w-14 border-t-4 border-purple-500 border-solid" />
   </div>
 )}
+       <Marquee />
 <div className="p-4 flex lg:flex-row sm:flex-col md:flex-col">
       {/* LEFT SECTION */}
          <div className='flex flex-col  justify-center lg:w-[50%] sm:w-[100%] md:w-[100%] '>
