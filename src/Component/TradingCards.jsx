@@ -7,7 +7,7 @@ const TradingCards = ({title,rating,details,img,compact,related}) => {
     ${compact
       ? 'lg:max-w-[400px] md:min-w-[200px] md:max-w-[200px] sm:min-w-[155px] sm:max-w-[150px] lg:h-[250px]'
       : related
-      ? 'lg:h-[230px] sm:h-[130px]'
+      ? 'lg:h-[230px] sm:h-[140px]'
       : 'lg:h-[260px] sm:h-[135px]'
     }`}
 >
@@ -20,7 +20,7 @@ const TradingCards = ({title,rating,details,img,compact,related}) => {
             <h2 className='text-white font-semibold uppercase lg:text-[2rem] md:text-[16px] sm:text-[16px]'>{title}</h2>
            <p
   className={`text-[#F3C118] lg:text-[24px] md:text-[10px] 
-    ${related?'sm:text-[0.3rem]':''}
+    ${related?'sm:text-[3rem]':''}
     ${compact ? 'sm:text-[11px]' : 'sm:text-[14px] lg:text-[22px]'}
   
   }`}
