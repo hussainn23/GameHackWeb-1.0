@@ -11,7 +11,7 @@ export const About = () => {
         <hr className="border-[#606280] border-[0.02rem]" />
 
         <img
-          src="../../public/all-rummy-app-about-us.webp"
+          src="/all-rummy-app-about-us.webp"
           className="w-[80vw] h-auto lg:pt-16 m-auto block lg:h-[100vh] sm:h-[22vh] pt-4 object-fill"
         />
         <p className="mt-[0.1rem] mb-[0.2rem]  lg:text-[3.4rem]">

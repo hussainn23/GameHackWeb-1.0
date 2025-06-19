@@ -6,11 +6,11 @@ export const Footer = () => {
   <footer className="bg-[#0042a8] text-white text-center py-6  space-y-4 mt-6">
       {/* Social Media Icons */}
       <div className="flex justify-center flex-wrap gap-3 lg:text-[1.2rem]">
-        <a href="https://www.facebook.com/lootearning" target="_blank" className="bg-[#3b5998] flex items-center justify-center p-2 rounded-md w-[55px] border-white border-b-4 hover:border-b-2"><FaFacebookF /></a>
-        <a href="https://www.youtube.com/happygoldenlifechannel" target="_blank" className="bg-[#ff0000] flex items-center justify-center p-2 rounded-md w-[55px] border-white border-b-4 hover:border-b-2"><FaYoutube /></a>
+        <a href="https://www.facebook.com/lootearning" target="_blank" className="bg-[#3b5998] flex items-center justify-center p-2 rounded-md sm:w-[50px] lg:w-[55px] border-white border-b-4 hover:border-b-2"><FaFacebookF /></a>
+        <a href="https://www.youtube.com/happygoldenlifechannel" target="_blank" className="bg-[#ff0000] flex items-center justify-center p-2 rounded-md sm:w-[50px] lg:w-[55px] border-white border-b-4 hover:border-b-2"><FaYoutube /></a>
         <a href="https://allrummy.app/whatsapp/" target="_blank" className="bg-[#25D366] flex items-center gap-2 p-3 rounded-md font-bold border-white border-b-4 hover:border-b-2"><FaWhatsapp />Follow</a>
-        <a href="https://www.pinterest.com/lootearning" target="_blank" className="bg-[#c8232c] flex items-center justify-center p-2 rounded-md w-[55px] border-white border-b-4 hover:border-b-2"><FaPinterestP /></a>
-        <a href="https://www.twitter.com/allrummyapp" target="_blank" className="bg-[#1da1f2] flex items-center justify-center p-2 rounded-md w-[55px] border-white border-b-4 hover:border-b-2"><FaTwitter /></a>
+        <a href="https://www.pinterest.com/lootearning" target="_blank" className="bg-[#c8232c] flex items-center justify-center p-2 rounded-md sm:w-[50px] lg:w-[55px] border-white border-b-4 hover:border-b-2"><FaPinterestP /></a>
+        <a href="https://www.twitter.com/allrummyapp" target="_blank" className="bg-[#1da1f2] flex items-center justify-center p-2 rounded-md sm:w-[50px] lg:w-[55px] border-white border-b-4 hover:border-b-2"><FaTwitter /></a>
       </div>
 
       {/* Navigation Links */}
