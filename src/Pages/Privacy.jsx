@@ -70,7 +70,7 @@ export const Privacy = () => {
             {
               id: "info",
               title: "1. Information We Collect",
-              icon: <User className="h-6 w-6 text-purple-600" />,
+              icon: <User className="h-6 w-6 text-indigo-600" />,
               items: [
                 "Personal identifiers (name, e‑mail) when you register or contact us.",
                 "Device data – OS, version, country & language — purely for analytics.",
