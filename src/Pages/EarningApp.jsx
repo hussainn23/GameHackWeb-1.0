@@ -66,7 +66,7 @@ const EarningApp = () => {
         </div>
 
         <h1 className='text-xl text-[#7804A8] font-semibold mt-3 lg:text-[2.4rem]'>ALL APPS</h1>
-        <div className='grid lg:grid-cols-3 2xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2 gap-3.5 sm:gap-1 mt-4 '>
+        <div className='grid lg:grid-cols-3 2xl:grid-cols-4 md:grid-cols-3 sm:grid-cols-2  gap-4 mt-4 '>
           {tradingCards.map((item, index) => (
             <div onClick={() => navigate('/earningAppDetails', { state: { category: item.Category ,id:item.id} })}>
             <TradingCards

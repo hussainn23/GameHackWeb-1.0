@@ -22,7 +22,7 @@ const Navbar = () => {
  <h1
       className={`font-semibold lg:text-[1.3rem] sm:text-[1rem] 
         ${isHome ? 'text-yellow-400' : 'lg:text-[#FFE300] sm:text-black'}`}
-    >REAL RUMPY APPS</h1>
+    >REAL RUMMY APPS</h1>
      <div className='items-center text-[1.3rem] justify-between w-[50%] lg:flex sm:hidden md:hidden'>
   <Link
     to='/'

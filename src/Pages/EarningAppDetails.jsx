@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom';
 import TradingCards from '../Component/TradingCards';
 import { collection, getDocs ,doc,getDoc } from 'firebase/firestore';
 import { db } from '../../config/firebase'; // adjust path as needed
-
+import { Marquee } from '../Component/Marquee';
 const EarningAppDetails = () => {
   const location = useLocation();
   const category = location.state?.category || 'Unknown';
@@ -90,6 +90,7 @@ const [loading, setLoading] = useState(false);
      <div className="animate-spin rounded-full h-14 w-14 border-t-4 border-purple-500 border-solid" />
    </div>
  )}
+ <Marquee />
  <div className="p-4 flex lg:flex-row sm:flex-col md:flex-col">
        {/* LEFT SECTION */}
           <div className='flex flex-col  justify-center lg:w-[50%] sm:w-[100%] md:w-[100%] '>
@@ -166,7 +167,7 @@ const [loading, setLoading] = useState(false);
        {/* RIGHT SECTION - Related Apps */}
        <div className="lg:w-[55%] sm:w-[100%] md:w-[100%]">
          <h1 className="text-2xl sm:py-3 lg:text-[2rem] font-bold text-[#8900C1] uppercase">Related APPS</h1>
-         <div className="mt-1 grid sm:grid-cols-2  lg:grid-cols-2 gap-3 2xl:grid-cols-3">
+         <div className="mt-1 grid sm:grid-cols-2  lg:grid-cols-2 gap-4 2xl:grid-cols-3">
            {tradingCards.map((item, index) => (
              <div  onClick={()=>setID(item.id)}>
                   <TradingCards

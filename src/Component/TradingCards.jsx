@@ -5,9 +5,9 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
   <div
   className={`lg:rounded-[2rem] sm:rounded-[1rem] cursor-pointer p-1 bg-[linear-gradient(to_top_right,#9500A8,#6E00D9)]
     ${compact
-      ? 'lg:max-w-[390px] md:min-w-[200px] md:max-w-[200px] sm:min-w-[155px] sm:max-w-[150px] lg:h-[240px]'
+      ? 'lg:max-w-[390px] md:min-w-[200px] md:max-w-[200px] sm:min-w-[155px] sm:max-w-[150px] lg:h-[260px]'
       :  allApps
-      ? 'lg:h-[265px] sm:h-[140px]'
+      ? 'lg:h-[266px] sm:h-[135px]'
       : 'lg:h-[260px] sm:h-[135px]'
     }`}
 >
@@ -21,7 +21,7 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
            <p
   className={`text-[#F3C118]  md:text-[10px] 
   
-    ${compact ? 'sm:text-[11px]  lg:text-[24px]' : ''}
+    ${compact ? 'sm:text-[12px]  lg:text-[24px]' : ''}
      ${allApps ? 'sm:text-[12px] lg:text-[26px]':''}
      ${related ? 'sm:text-[12px] lg:text-[24px]':''}
   
@@ -34,9 +34,9 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
         </div>
     </div>
 <p
- className={`text-[#F3C118] sm:px-1 font-semibold mb-1 leading-none text-center 
+ className={`text-[#F3C118]  font-semibold mb-1 leading-none text-center 
   ${allApps ? 'lg:text-[29px] sm:text-[0.73rem] lg:mt-2 ' : ''} 
-  ${compact ? 'sm:text-[10px] lg:text-[24px]' : ''}
+  ${compact ? 'sm:text-[0.73rem] sm:pb-[3px] lg:text-[29px]' : ''}
     ${related ? 'sm:text-[12px] lg:text-[24px]':''}
 `}
 >
