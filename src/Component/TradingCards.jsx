@@ -14,7 +14,7 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
 
       {/* ${compact ? ' lg:max-w-[45%] md:min-w-[200px] md:max-w-[200px]  sm:min-w-[150px] sm:max-w-[150px] lg:h-[500px] ' : 'w-full'}`
       } */}
-    <div className='flex items-center lg:gap-4 p-2 sm:gap-1'>
+    <div className='flex items-center lg:gap-4 p-2 sm:gap-2'>
         <img    src={img}      className="w-14 h-14 lg:w-26 lg:h-26 sm:rounded-[0.7rem] lg:rounded-[1.2rem] mt-4 object-cover sm:mt-0"/>
         <div>
             <h2 className='text-white font-semibold uppercase lg:text-[2rem] md:text-[16px] sm:text-[16px]'>{title}</h2>
