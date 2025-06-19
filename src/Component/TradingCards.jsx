@@ -34,7 +34,7 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
         </div>
     </div>
 <p
- className={`text-[#F3C118] font-semibold mb-1 leading-none text-center 
+ className={`text-[#F3C118] sm:px-1 font-semibold mb-1 leading-none text-center 
   ${allApps ? 'lg:text-[29px] sm:text-[0.73rem] lg:mt-2 ' : ''} 
   ${compact ? 'sm:text-[10px] lg:text-[24px]' : ''}
     ${related ? 'sm:text-[12px] lg:text-[24px]':''}
