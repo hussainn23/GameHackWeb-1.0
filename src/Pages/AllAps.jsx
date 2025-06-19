@@ -167,8 +167,8 @@ useEffect(() => {
 
       {/* RIGHT SECTION - Related Apps */}
       <div className="lg:w-[50%] sm:w-[100%] md:w-[100%]">
-        <h1 className="text-2xl sm:py-2  lg:text-[2rem] font-bold text-[#8900C1] uppercase">Related APPS</h1>
-        <div className="mt-2  grid sm:grid-cols-2  lg:grid-cols-2 lg:gap-4 sm:gap-3 2xl:grid-cols-3">
+        <h1 className="text-2xl sm:py-3  lg:text-[2rem] font-bold text-[#8900C1] uppercase">Related APPS</h1>
+        <div className="mt-1  grid sm:grid-cols-2  lg:grid-cols-2 lg:gap-4 sm:gap-3 2xl:grid-cols-3">
           {tradingCards.map((item, index) => (
             <div  onClick={()=>setID(item.id)}>
                  <TradingCards
