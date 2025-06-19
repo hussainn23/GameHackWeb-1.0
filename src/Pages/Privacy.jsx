@@ -114,7 +114,7 @@ export const Privacy = () => {
               items: [
                 <>
                   Questions? E‑mail us at{" "}
-                  <span className="text-purple-700 dark:text-purple-400 font-semibold">support@realrumpyapps.com</span>
+                  <span className="text-indigo-700 dark:text-indigo-400 font-semibold">support@realrumpyapps.com</span>
                 </>
               ],
             },
