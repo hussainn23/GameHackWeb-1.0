@@ -4,20 +4,21 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
   return (
   <div
   className={`lg:rounded-[2rem] sm:rounded-[1rem] cursor-pointer lg:p-2 sm:p-[3px] bg-[linear-gradient(to_top_right,#9500A8,#6E00D9)]
-    ${compact
-      ? ' md:w-[200px] md:h-[130px] sm:h-[129px] sm:w-[175px] lg:h-[260px] lg:w-[390px]'
-      :  allApps
-      ? 'lg:h-[266px] sm:h-[135px]'
-      : 'lg:h-[246px] sm:h-[135px]'
+    ${
+      compact
+        ? 'md:w-[200px] md:h-[130px] sm:h-[129px] sm:w-[175px] lg:h-[260px] lg:w-[390px]'
+      
+        : allApps
+        ? 'lg:h-[266px] sm:h-[135px]'
+        : 'lg:h-[246px] sm:h-[135px]'
     }`}
 >
 
-      {/* ${compact ? ' lg:max-w-[45%] md:min-w-[200px] md:max-w-[200px]  sm:min-w-[150px] sm:max-w-[150px] lg:h-[500px] ' : 'w-full'}`
-      } */}
     <div className='flex items-center lg:gap-4 p-2 sm:p-[2px] sm:pb-1  gap-1'>
         <img    src={img}      className="w-14 h-14 lg:w-26 lg:h-26 sm:rounded-[0.7rem] lg:rounded-[1.2rem] mt-2 object-cover sm:mt-0"/>
         <div>
-            <h2 className='text-white  line-clamp-2 font-semibold uppercase lg:text-[1.5rem] md:text-[16px] sm:text-[11px]'>{title}</h2>
+            <h2 className='text-white  line-clamp-2 font-semibold uppercase lg:text-[1.5rem] md:text-[16px] 
+            sm:text-[10px]'>{title}</h2>
            <p
   className={`text-[#F3C118]  md:text-[10px] 
   
@@ -37,7 +38,7 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
  className={`text-[#F3C118]  font-semibold p-1 lg:pb-2  leading-none text-center 
   ${allApps ? 'lg:text-[29px] sm:text-[0.73rem] lg:mt-2 ' : ''} 
   ${compact ? 'sm:text-[0.73rem] sm:pb-[3px] lg:text-[29px]' : ''}
-    ${related ? 'sm:text-[0.73rem] lg:text-[24px]':''}
+    ${related ? 'sm:text-[0.73rem] lg:text-[22px] ':''}
 `}
 >
 
