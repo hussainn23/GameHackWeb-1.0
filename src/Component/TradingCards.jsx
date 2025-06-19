@@ -6,7 +6,7 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
   className={`lg:rounded-[2rem] sm:rounded-[1rem] cursor-pointer lg:p-2 sm:p-[3px] bg-[linear-gradient(to_top_right,#9500A8,#6E00D9)]
     ${
       compact
-        ? 'md:w-[200px] md:h-[130px] sm:h-[135px] sm:w-[155px] lg:h-[260px] lg:w-[390px]'
+        ? 'md:w-[200px] md:h-[130px] sm:h-[135px] sm:w-[43vw] lg:h-[260px] lg:w-[390px]'
       
         : allApps
         ? 'lg:h-[266px] sm:h-[135px] '
@@ -22,9 +22,9 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
            <p
   className={`text-[#F3C118]  md:text-[10px] 
   
-    ${compact ? 'sm:text-[12px]  lg:text-[24px]' : ''}
-     ${allApps ? 'sm:text-[12px] lg:text-[24px]':''}
-     ${related ? 'sm:text-[12px] lg:text-[24px]':''}
+    ${compact ? 'sm:text-[11px]  lg:text-[24px]' : ''}
+     ${allApps ? 'sm:text-[11px] lg:text-[24px]':''}
+     ${related ? 'sm:text-[11px] lg:text-[24px]':''}
   
   }`}
 >
