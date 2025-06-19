@@ -15,7 +15,7 @@ export const About = () => {
         {/* Company Mission */}
         <section className="mb-16 grid lg:grid-cols-2 gap-10 items-center">
           <img
-            src="https://source.unsplash.com/600x400/?technology,team"
+            src="https://t4.ftcdn.net/jpg/05/86/32/93/240_F_586329308_vrzIxluc5VjkQL5PyMkD9rZS4UpKAA2t.jpg"
             alt="Our Mission"
             className="rounded-2xl shadow-lg"
           />
