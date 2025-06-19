@@ -10,6 +10,9 @@ import AllAps from "./Pages/AllAps";
 import EarningApp from "./Pages/EarningApp";
 import EarningAppDetails from "./Pages/EarningAppDetails";
 import APKDetails from './Pages/APKDetails';
+import { About } from './Pages/About';
+import { Privacy } from './Pages/Privacy';
+import { Terms } from './Pages/Terms';
 
 function App() {
   const location = useLocation();
@@ -36,6 +39,9 @@ function App() {
           <Route path="/allapps" element={<AllAps />} />
           <Route path="/earningapps" element={<EarningApp />} />
           <Route path="/earningAppDetails" element={<EarningAppDetails />} />
+          <Route path='/aboutus' element={<About />}/>
+          <Route path='/privacypolicy' element={<Privacy />}/>
+           <Route path='/termsconditions' element={<Terms />}/>
           <Route path="apkdetails/:id" element={<APKDetails />} />
         </Route>
       </Routes>

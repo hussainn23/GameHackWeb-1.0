@@ -141,3 +141,7 @@ body{
 #no-scrollbar::-webkit-scrollbar {
   display: none; /* Chrome, Safari, Opera */
 }
+/*   scrollspy.css  */
+.toc-link.active-toc {
+  @apply text-purple-700 dark:text-purple-300 font-semibold bg-purple-100/60 dark:bg-zinc-700;
+}
