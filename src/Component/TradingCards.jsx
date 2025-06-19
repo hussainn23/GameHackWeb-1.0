@@ -6,10 +6,10 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
   className={`lg:rounded-[2rem] sm:rounded-[1rem] cursor-pointer lg:p-2 sm:p-[3px] bg-[linear-gradient(to_top_right,#9500A8,#6E00D9)]
     ${
       compact
-        ? 'md:w-[200px] md:h-[130px] sm:h-[129px] sm:w-[175px] lg:h-[260px] lg:w-[390px]'
+        ? 'md:w-[200px] md:h-[130px] sm:h-[135px] sm:w-[155px] lg:h-[260px] lg:w-[390px]'
       
         : allApps
-        ? 'lg:h-[266px] sm:h-[135px]'
+        ? 'lg:h-[266px] sm:h-[135px] '
         : 'lg:h-[246px] sm:h-[135px]'
     }`}
 >
@@ -18,7 +18,7 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
         <img    src={img}      className="w-14 h-14 lg:w-26 lg:h-26 sm:rounded-[0.7rem] lg:rounded-[1.2rem] mt-2 object-cover sm:mt-0"/>
         <div>
             <h2 className='text-white  line-clamp-2 font-semibold uppercase lg:text-[1.5rem] md:text-[16px] 
-            sm:text-[10px]'>{title}</h2>
+            sm:text-[9px]'>{title}</h2>
            <p
   className={`text-[#F3C118]  md:text-[10px] 
   
