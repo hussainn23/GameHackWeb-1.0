@@ -98,9 +98,9 @@ const [loading, setLoading] = useState(false);
                  <img src={selectedApp.Logo} className='rounded-[1rem] lg:w-36 lg:h-36 relative m-auto top-[-2rem] lg:top-[-4rem] sm:w-28 sm:h-28 sm:top-[-3rem]' />
                  <h1 className=' lg:text-[3.7rem] sm:text-[2rem] text-center  font-bold text-[#8900C1] uppercase relative top-[-2rem]'>{selectedApp.Name}</h1>
                  <div className='flex items-center lg:text-[1.2rem] lg:w-[90%]  sm:w-[97%] m-auto justify-between font-semibold relative top-[-1.3rem]'>
-                     <p> {selectedApp.rating} <span className='text-red-600'> ★</span><br /> Rating</p>
-                     <p>{selectedApp.SizeMB}  MB</p>
-                     <p>{selectedApp.bonus}rs<br />bonus</p>
+                     <p className='text-center'> {selectedApp.rating} <span className='text-red-600'> ★</span><br /> Rating</p>
+                     <p className='text-center'>{selectedApp.SizeMB}  MB</p>
+                     <p className='text-center'>{selectedApp.bonus}rs<br />bonus</p>
                  </div>
                  <div className='flex bg lg:w-[90%] sm:w-[98%] items-center justify-center sm:gap-4 lg:gap-3 font-bold '>
                      <button onClick={handleKnowMore} className='rounded-[2rem] border-[1px] border-[#8700BA] lg:text-[1.3rem] cursor-pointer lg:p-3 font-semibold  p-2 bg-[#E4D8FF] w-[50%]'>Know More</button>
