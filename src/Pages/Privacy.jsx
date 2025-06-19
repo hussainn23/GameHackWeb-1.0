@@ -22,7 +22,7 @@ export const Privacy = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gradient-to-b from-white to-purple-100 dark:from-zinc-900 dark:to-zinc-800">
+    <div className="min-h-screen bg-gradient-to-b from-white to-indigo-100 dark:from-zinc-900 dark:to-zinc-800">
       {/* ─── Hero ──────────────────────────────────────────────────────── */}
       <header className="relative isolate overflow-hidden">
         <div className="absolute inset-0 -z-10 bg-[url('https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=1200&q=60')] bg-cover bg-center opacity-20 dark:opacity-10" />
@@ -122,7 +122,7 @@ export const Privacy = () => {
             <section key={sec.id} id={sec.id} data-section className="scroll-mt-28">
               <div className="flex items-start gap-4">
                 {sec.icon}
-                <h2 className="text-2xl font-semibold text-purple-700 dark:text-purple-400">
+                <h2 className="text-2xl font-semibold text-indigo-700 dark:text-indigo-400">
                   {sec.title}
                 </h2>
               </div>
