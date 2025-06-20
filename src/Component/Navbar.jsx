@@ -21,7 +21,7 @@ const Navbar = () => {
         ${isHome ? 'bg-[#2B0061] text-white' : 'lg:bg-[#2B0061] lg:text-white sm:bg-white '}`}
     >
  <h1
-      className={`font-semibold lg:text-[1.3rem] sm:text-[1rem] 
+      className={`font-semibold sm:leading-1 lg:text-[1.3rem] sm:text-[1.1rem] 
         ${isHome ? 'text-yellow-400' : 'lg:text-[#FFE300] sm:text-black'}`}
     >REAL RUMMY APPS</h1>
      <div className='items-center text-[1.3rem] justify-between w-[50%] lg:flex sm:hidden md:hidden'>
