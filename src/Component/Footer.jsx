@@ -34,7 +34,10 @@ export const Footer = () => {
 
       {/* DMCA Badge */}
       <div className="flex justify-center items-center gap-1">
-        <img src="https://images.dmca.com/Badges/_dmca_premi_badge_5.png?ID=1e218a7a-b6fa-4654-94d2-13571af14355"  alt="DMCA Protected" className="lg:h-12" />
+      <a href="https://www.dmca.com/Protection/Status.aspx?ID=1e218a7a-b6fa-4654-94d2-13571af14355&amp;refurl=https://www.allrummy.app/about.html" title="DMCA.com Protection Status" class="dmca-badge" target="_blank">
+          <img src="https://images.dmca.com/Badges/_dmca_premi_badge_5.png?ID=1e218a7a-b6fa-4654-94d2-13571af14355"  alt="DMCA Protected" className="lg:h-12" />
+      </a>
+      
         
       </div>
 

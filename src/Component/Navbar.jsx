@@ -9,6 +9,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu"
 import { Link, useLocation } from 'react-router-dom'
+import Search from './Search';
 
 const Navbar = () => {
 
@@ -52,7 +53,8 @@ const Navbar = () => {
     YONO APPS
   </Link>
 </div>
-
+<div className='flex items-center sm:gap-2 lg:gap-12'>
+  <Search />
        <DropdownMenu >
         <DropdownMenuTrigger ><Menu className='cursor-pointer'/></DropdownMenuTrigger>
         <DropdownMenuContent className=' lg:w-[70vw] sm:w-[50vw] overflow-y-auto  rounded-md shadow-md p-2 bg-white'>
@@ -93,6 +95,8 @@ const Navbar = () => {
         <DropdownMenuSeparator />
         </DropdownMenuContent>
        </DropdownMenu>
+</div>
+
 
     </div>
   )

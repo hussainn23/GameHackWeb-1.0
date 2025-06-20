@@ -4,15 +4,9 @@ import TradingCards from '../Component/TradingCards';
 import { collection, getDocs ,doc,getDoc } from 'firebase/firestore';
 import { db } from '../../config/firebase'; // adjust path as needed
 import { Marquee } from '../Component/Marquee';
-const EarningAppDetails = () => {
+export const SearchAppDetails = () => {
   const location = useLocation();
-  const [category, setCategory] = useState('Unknown');
-useEffect(() => {
-  if (location.state?.category) {
-    setCategory(location.state.category);
-  }
-}, [location.state?.category]);
-
+  const category = location.state?.category || 'Unknown';
   const rating = location.state?.rating || 'Unknown';
 const [previewImage, setPreviewImage] = useState(null);
   const [knowMore, setKnowMore] = useState(false);
@@ -204,6 +198,3 @@ const [loading, setLoading] = useState(false);
      
    );
 };
-
-
-export default EarningAppDetails

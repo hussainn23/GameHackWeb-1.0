@@ -5,6 +5,7 @@ import HRatingCards from '../Component/HRatingCards'
 import React from "react";
 import { collection, getDocs } from 'firebase/firestore';
 import { db } from '../../config/firebase'; // or your correct db path
+import Search from '../Component/Search';
 
 const Home = () => {
  const [RatingData, setRatingData] = useState([]);
@@ -67,6 +68,7 @@ const Home = () => {
   return (
     <div 
     >
+    {/* <Search /> */}
        <div className='lg:h-[65vh] md:h-[30vh] sm:h-[25vh] bg-[#6ABFFF] overflow-hidden'>
   <video
     className='w-full h-full object-cover'
