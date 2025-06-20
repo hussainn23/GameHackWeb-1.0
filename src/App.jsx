@@ -1,52 +1,40 @@
-import { useEffect, useState } from 'react';
-import { Routes, Route, useLocation } from 'react-router-dom';
-import Loader from '../src/Component/Loader'; // import your loader
+import { Suspense, lazy } from 'react';
+import { Routes, Route } from 'react-router-dom';
+import Loader from '../src/Component/Loader';
 import { Toaster } from "sonner";
 
-// Your pages
-import Layout from './Pages/Layout';
-import Home from './Pages/Home';
-import AllAps from "./Pages/AllAps";
-import EarningApp from "./Pages/EarningApp";
-import EarningAppDetails from "./Pages/EarningAppDetails";
-import APKDetails from './Pages/APKDetails';
-import { About } from './Pages/About';
-import { Privacy } from './Pages/Privacy';
-import { Terms } from './Pages/Terms';
-import { SearchAppDetails } from './Pages/SearchAppDetails';
+// Layout and pages
+const Layout = lazy(() => import('./Pages/Layout'));
+const Home = lazy(() => import('./Pages/Home'));
+const AllAps = lazy(() => import('./Pages/AllAps'));
+const EarningApp = lazy(() => import('./Pages/EarningApp'));
+const EarningAppDetails = lazy(() => import('./Pages/EarningAppDetails'));
+const APKDetails = lazy(() => import('./Pages/APKDetails'));
+const About = lazy(() => import('./Pages/About'));
+const Privacy = lazy(() => import('./Pages/Privacy'));
+const Terms = lazy(() => import('./Pages/Terms'));
+const SearchAppDetails = lazy(() => import('./Pages/SearchAppDetails'));
 
 function App() {
-  const location = useLocation();
-  const [loading, setLoading] = useState(false);
-
-  useEffect(() => {
-    setLoading(true);
-
-    const timer = setTimeout(() => {
-      setLoading(false);
-    }, 600); // Adjust duration as needed (in ms)
-
-    return () => clearTimeout(timer);
-  }, [location]);
-
   return (
     <>
       <Toaster richColors position="top-center" />
-      {loading && <Loader />}
 
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="/allapps" element={<AllAps />} />
-          <Route path="/earningapps" element={<EarningApp />} />
-          <Route path="/earningAppDetails" element={<EarningAppDetails />} />
-        
-          <Route path='/aboutus' element={<About />}/>
-          <Route path='/privacypolicy' element={<Privacy />}/>
-           <Route path='/termsconditions' element={<Terms />}/>
-          <Route path="apkdetails/:id" element={<APKDetails />} />
-        </Route>
-      </Routes>
+      <Suspense fallback={<Loader />}>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route index element={<Home />} />
+            <Route path="/allapps" element={<AllAps />} />
+            <Route path="/earningapps" element={<EarningApp />} />
+            <Route path="/earningAppDetails" element={<EarningAppDetails />} />
+            <Route path="/aboutus" element={<About />} />
+            <Route path="/privacypolicy" element={<Privacy />} />
+            <Route path="/termsconditions" element={<Terms />} />
+            <Route path="apkdetails/:id" element={<APKDetails />} />
+            <Route path="/searchdetails" element={<SearchAppDetails />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </>
   );
 }

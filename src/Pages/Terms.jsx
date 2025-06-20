@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { FileText, ShieldAlert, Ban, Crown, Mail } from "lucide-react";
 // import "./scrollspy.css";
 
-export const Terms = () => {
+ const Terms = () => {
   /* → re‑use the same scroll‑spy effect */
   useEffect(() => {
     const links = document.querySelectorAll("a[data-link]");
@@ -128,3 +128,4 @@ export const Terms = () => {
     </div>
   );
 };
+ export default Terms

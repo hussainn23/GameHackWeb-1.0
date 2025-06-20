@@ -10,6 +10,8 @@ const AllAps = () => {
   const rating = location.state?.rating || 'Unknown';
 const [previewImage, setPreviewImage] = useState(null);
 const [loading, setLoading] = useState(false);
+const [mainImageLoaded, setMainImageLoaded] = useState(false);
+const [logoLoaded, setLogoLoaded] = useState(false);
 
   const [knowMore, setKnowMore] = useState(false);
  const [id, setID] = useState(location.state?.id || null);
@@ -50,7 +52,11 @@ useEffect(() => {
   fetchSelectedApp();
 }, [id]);
 
-
+useEffect(() => {
+  // Reset image loading flags when a new ID is selected
+  setMainImageLoaded(false);
+  setLogoLoaded(false);
+}, [id]);
 
  useEffect(() => {
   if (selectedApp) {
@@ -87,17 +93,41 @@ useEffect(() => {
 
 
   return (
-    <>{loading && (
-  <div className="fixed inset-0 bg-white bg-opacity-80 z-50 flex items-center justify-center">
-    <div className="animate-spin rounded-full h-14 w-14 border-t-4 border-purple-500 border-solid" />
-  </div>
-)}
+    <>
        <Marquee />
 <div className="p-4 flex lg:flex-row sm:flex-col md:flex-col">
       {/* LEFT SECTION */}
          <div className='flex flex-col  justify-center lg:w-[50%] sm:w-[100%] md:w-[100%] '>
-                <img src={selectedApp.MainImage} className='rounded-[1.9rem]  sm:rounded-[1.5rem] lg:w-[90%] sm:w-[97%] lg:h-[320px] sm:h-[280px] m-auto ' />
-                <img src={selectedApp.Logo} className='rounded-[1rem] lg:w-36 lg:h-36 relative m-auto top-[-2rem] lg:top-[-4rem] sm:w-28 sm:h-28 sm:top-[-3rem]' />
+                {/* Main Image */}
+<div className='relative lg:w-[90%] sm:w-[97%] lg:h-[320px] sm:h-[280px] m-auto'>
+  {!mainImageLoaded && (
+    <div className="absolute inset-0 flex items-center justify-center bg-gray-200 rounded-[1.9rem]">
+      <div className="loader border-t-4 border-purple-600 border-solid rounded-full w-10 h-10 animate-spin"></div>
+    </div>
+  )}
+  <img
+    src={selectedApp.MainImage}
+    onLoad={() => setMainImageLoaded(true)}
+    className={`rounded-[1.9rem] sm:rounded-[1.5rem] w-full h-full object-cover transition-opacity duration-500 ${mainImageLoaded ? 'opacity-100' : 'opacity-0'}`}
+    alt="Main"
+  />
+</div>
+
+{/* Logo Image */}
+<div className='relative m-auto top-[-2rem] lg:top-[-4rem] sm:top-[-3rem]'>
+  {!logoLoaded && (
+    <div className="absolute inset-0 flex items-center justify-center bg-gray-200 rounded-full w-36 h-36">
+      <div className="loader border-t-4 border-purple-600 border-solid rounded-full w-8 h-8 animate-spin"></div>
+    </div>
+  )}
+  <img
+    src={selectedApp.Logo}
+    onLoad={() => setLogoLoaded(true)}
+    className={`rounded-[1rem] lg:w-36 lg:h-36 sm:w-28 sm:h-28 object-cover transition-opacity duration-500 ${logoLoaded ? 'opacity-100' : 'opacity-0'}`}
+    alt="Logo"
+  />
+</div>
+
                 <h1 className=' lg:text-[3.7rem] sm:text-[2.3rem] text-center  font-bold text-[#8900C1] uppercase relative leading-none top-[-2rem]'>{selectedApp.Name}</h1>
                 <div className='flex items-center lg:text-[1.2rem] lg:w-[90%]  sm:w-[97%] m-auto justify-between font-semibold relative top-[-1.3rem] '>
                     <p className='text-center'>{selectedApp.rating||"4.7"} <span className='text-red-600'> ★</span><br /> Rating</p>
