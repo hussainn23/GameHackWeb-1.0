@@ -42,7 +42,7 @@ const EarningApp = () => {
     <div>
       <Marquee />
       <div className='p-4'>
-        <h1 className='text-[20px] sm:pb-[9px] lg:py-6 leading-0 font-semibold lg:text-[2.7rem]'>{category}</h1>
+        <h1 className='text-[20px] font-stretch-ultra-expanded sm:pb-[9px] lg:py-6 leading-0 font-semibold lg:text-[2.7rem]'>{category}</h1>
 
         <div className='rounded-lg p-3 flex flex-col gap-1 bg-[#E3E3E3] mt-3 '>
           <h1 className='text-[20px] sm:py-2 lg:py-6 leading-0 text-[#7804A8] font-semibold lg:text-[2.4rem]'>TOP APPS</h1>
