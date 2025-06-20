@@ -31,7 +31,7 @@ const TradingCards = ({title,rating,details,img,compact,related,allApps}) => {
         />
         <div>
             <h2 className='text-white  line-clamp-2 font-semibold uppercase lg:text-[1.5rem] md:text-[16px] 
-            sm:text-[10.09px]'>{title}</h2>
+            sm:text-[14px]'>{title}</h2>
            <p
   className={`text-[#F3C118]  md:text-[10px] 
   
