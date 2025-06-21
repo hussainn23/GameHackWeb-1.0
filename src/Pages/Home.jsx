@@ -1,15 +1,12 @@
-// src/Pages/Home.jsx
 import React, { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { collection, getDocs } from 'firebase/firestore'
+import { collection, getDocs, query, where } from 'firebase/firestore'
 import { db } from '../../config/firebase'
 import HRatingCards from '../Component/HRatingCards'
 import Loader from '../Component/Loader'
-/** 
- * Preload an image URL, resolves when loaded (or on error).
- */
-const preloadImage = src =>
-  new Promise(resolve => {
+
+const preloadImage = (src) =>
+  new Promise((resolve) => {
     if (!src) return resolve()
     const img = new Image()
     img.onload = img.onerror = () => resolve()
@@ -21,41 +18,45 @@ const Home = () => {
   const navigate = useNavigate()
 
   useEffect(() => {
-    const fetchAndPreload = async () => {
-      // 1️⃣ fetch all APK docs
-      const snap = await getDocs(collection(db, 'APK'))
-      const all = snap.docs.map(d => ({ id: d.id, ...d.data() }))
+    const fetchData = async () => {
+      try {
+        //  1. Query only visible and needed apps directly from Firebase
+        const apkQuery = query(
+          collection(db, 'APK'),
+          where('Visible', '==', true)
+        )
+        const snap = await getDocs(apkQuery)
 
-      // 2️⃣ filter & sort
-      const filtered = all
-        .filter(
-          apk =>
-            apk.Visible === true &&
+        // ✅ 2. Extract needed data
+        const filtered = snap.docs
+          .map((d) => ({ id: d.id, ...d.data() }))
+          .filter((apk) =>
             [1, 2, 3].includes(Number(apk.MainScreenPosition))
-        )
-        .sort(
-          (a, b) =>
-            Number(a.MainScreenPosition) - Number(b.MainScreenPosition)
-        )
+          )
+          .sort(
+            (a, b) =>
+              Number(a.MainScreenPosition) - Number(b.MainScreenPosition)
+          )
 
-      // 3️⃣ preload each logo + mainImage
-      await Promise.all(
-        filtered.flatMap(item => [
+        // ✅ 3. Fire image preload promises in parallel
+        const preloadPromises = filtered.flatMap((item) => [
           preloadImage(item.Logo),
-          preloadImage(item.MainImage)
+          preloadImage(item.MainImage),
         ])
-      )
+        await Promise.all(preloadPromises)
 
-      // 4️⃣ now safe to render
-      setRatingData(filtered)
+        // ✅ 4. Set state only after all is ready
+        setRatingData(filtered)
+      } catch (err) {
+        console.error('Error fetching Home data:', err)
+      }
     }
 
-    fetchAndPreload().catch(console.error)
+    fetchData()
   }, [])
 
-  // still loading?
   if (ratingData === null) {
-    return <Loader/>  // or <Loader /> if you have one
+    return <Loader />
   }
 
   const cardData = [
@@ -63,31 +64,31 @@ const Home = () => {
       title: 'COLOUR TRADING',
       category: 'COLOUR TRADING',
       link: '/earningapps',
-      bgGradient: 'bg-[linear-gradient(to_top_right,#9500A8,#6E00D9)]'
+      bgGradient: 'bg-[linear-gradient(to_top_right,#9500A8,#6E00D9)]',
     },
     {
       title: 'RUMMY GAMES',
       category: 'RUMMY GAMES',
       link: '/earningapps',
-      bgGradient: 'bg-[linear-gradient(to_top_right,#7300D2,#6E00D9)]'
+      bgGradient: 'bg-[linear-gradient(to_top_right,#7300D2,#6E00D9)]',
     },
     {
       title: 'YONO GAMES',
       category: 'YONO GAMES',
       link: '/earningapps',
-      bgGradient: 'bg-[linear-gradient(to_top_right,#9500A8,#6E00D9)]'
+      bgGradient: 'bg-[linear-gradient(to_top_right,#9500A8,#6E00D9)]',
     },
     {
       title: 'OTHER GAMES',
       category: 'OTHER GAMES',
       link: '/earningapps',
-      bgGradient: 'bg-[linear-gradient(to_top_right,#7300D2,#6E00D9)]'
-    }
+      bgGradient: 'bg-[linear-gradient(to_top_right,#7300D2,#6E00D9)]',
+    },
   ]
 
   return (
     <div>
-      {/* Hero video */}
+      {/* Hero Video */}
       <div className="lg:h-[65vh] md:h-[30vh] sm:h-[25vh] bg-[#6ABFFF] overflow-hidden">
         <video
           className="w-full h-full object-cover"
@@ -100,9 +101,9 @@ const Home = () => {
       </div>
 
       <div className="bg-[#2B0061] sm:min-h-[75vh]">
-        {/* Top‑3 rating cards */}
+        {/* Rating Cards */}
         <div className="grid grid-cols-3 md:w-[65%] sm:w-[95%] lg:w-[75%] lg:gap-4 sm:gap-3 m-auto lg:p-6 relative top-16 sm:p-2">
-          {ratingData.map(item => (
+          {ratingData.map((item) => (
             <HRatingCards
               key={item.id}
               id={item.id}
@@ -118,7 +119,7 @@ const Home = () => {
           ))}
         </div>
 
-        {/* Category links */}
+        {/* Category Buttons */}
         <div className="lg:mt-11 sm:mt-20 md:mt-20">
           <h1 className="sm:text-3xl lg:text-[5rem] lg:p-8 text-yellow-300 text-center font-semibold">
             TOP EARNING APPS
@@ -135,10 +136,9 @@ const Home = () => {
                   transition-all duration-300 ease-in-out transform 
                   hover:-rotate-1 hover:scale-[1.03]
                 `}
-                style={{ perspective: '1000px' }}
                 onClick={() =>
                   navigate(card.link, {
-                    state: { category: card.category }
+                    state: { category: card.category },
                   })
                 }
               >

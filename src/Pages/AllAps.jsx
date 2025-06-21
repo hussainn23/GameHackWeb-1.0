@@ -1,10 +1,11 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect,useRef } from 'react';
 import { useLocation } from 'react-router-dom';
 import TradingCards from '../Component/TradingCards';
 import { collection, getDocs ,doc,getDoc } from 'firebase/firestore';
 import { db } from '../../config/firebase'; // adjust path as needed
 import { Marquee } from '../Component/Marquee';
 const AllAps = () => {
+   const detailsRef = useRef(null);
   const location = useLocation();
   const category = location.state?.category || 'Unknown';
   const rating = location.state?.rating || 'Unknown';
@@ -18,7 +19,18 @@ const [logoLoaded, setLogoLoaded] = useState(false);
 
   const [tradingCards, setTradingCards] = useState([]);
   const [selectedApp, setSelectedApp] = useState([]);
-  const handleKnowMore = () => setKnowMore(!knowMore);
+ const handleKnowMore = () => {
+  setKnowMore(prev => {
+    const newState = !prev;
+    if (!prev) {
+      // scroll only when opening
+      setTimeout(() => {
+        detailsRef.current?.scrollIntoView({ behavior: 'smooth' });
+      }, 100); // Delay to allow the section to start expanding
+    }
+    return newState;
+  });
+};
   useEffect(() => {
   console.log('Location:', location);
   console.log('ID:', id);
@@ -140,7 +152,7 @@ useEffect(() => {
                      <a href={selectedApp.URL}  rel="noopener noreferrer">Download</a>
                     </button>
                 </div>
-               <div
+               <div ref={detailsRef}
   className={`
     overflow-hidden transition-all duration-500 ease-in-out 
     ${knowMore ? 'mt-3 p-4 max-h-[1000px] opacity-100' : 'max-h-0 opacity-0'}

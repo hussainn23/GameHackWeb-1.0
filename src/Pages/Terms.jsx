@@ -65,7 +65,7 @@ import { FileText, ShieldAlert, Ban, Crown, Mail } from "lucide-react";
         <>
           For clarifications, email&nbsp;
           <span className="text-indigo-700 dark:text-indigo-300 font-semibold">
-            legal@realrumpyapps.com
+AllRummyApp@gmail.com
           </span>
         </>,
       ],
